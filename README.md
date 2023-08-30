@@ -12,7 +12,7 @@ To start the Friends App on your local machine, follow these steps:
 
 2. Navigate to the project directory:
 
-   cd friends-app
+   cd friend-app
 
 3. Install project dependencies using Yarn
 
