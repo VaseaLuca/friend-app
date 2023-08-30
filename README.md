@@ -20,4 +20,6 @@ To start the Friends App on your local machine, follow these steps:
 
 4. Start the development server
 
+   yarn dev
+
 5. Open your web browser and go to `http://localhost:5173/`
