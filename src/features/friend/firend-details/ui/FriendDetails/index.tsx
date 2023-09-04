@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { RootState } from "features/friend";
-import { FriendDetailsCard } from "../FriendDetailsCard/FriendDetailsCard";
+import { FriendDetailsCard } from "../FriendDetailsCard";
 
 export const FriendDetails = () => {
   const navigate = useNavigate();
