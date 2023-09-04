@@ -1,1 +1,1 @@
-export { friendsSlice, addFriend, editFriend, removeFriend, selectFriend } from "./slice";
+export { friendsSlice, addFriend, editFriend, removeFriend } from "./slice";

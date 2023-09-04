@@ -1,1 +1,1 @@
-export { friendsSlice, addFriend, editFriend, removeFriend, selectFriend } from "../../features/friend/model/slice";
+export { friendsSlice, addFriend, editFriend, removeFriend } from "../../features/friend/model/slice";

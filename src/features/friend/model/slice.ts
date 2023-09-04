@@ -12,7 +12,6 @@ const initialState: FriendsState = {
       twitter: "@Blobb",
     },
   ],
-  selectedFriend: undefined,
 };
 
 export const friendsSlice = createSlice({
@@ -25,18 +24,21 @@ export const friendsSlice = createSlice({
     editFriend: (state, { payload }: PayloadAction<Friend>) => {
       //TODO: to be done when we'll have the filled firend object
       const newFiendList = state.friendList.map((item) => (item.id === payload.id ? payload : item));
-      
-      state.friendList = [...newFiendList];
+
+      return {
+        ...state,
+        friendList: newFiendList,
+      }
     },
     removeFriend: (state, { payload }: PayloadAction<number>) => {
       const updatedFriendList = state.friendList.filter(({ id }) => id != payload);
-      
-      state.friendList = [...updatedFriendList];
-    },
-    selectFriend: (state, action: PayloadAction<number>) => {
-      state.selectedFriend = state.friendList.find((friend) => friend.id === action.payload);
+
+      return {
+        ...state,
+        friendList: updatedFriendList
+      }
     },
   },
 });
 
-export const { addFriend, editFriend, removeFriend, selectFriend } = friendsSlice.actions;
+export const { addFriend, editFriend, removeFriend } = friendsSlice.actions;

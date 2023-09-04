@@ -37,10 +37,14 @@ export const ManageFriendForm = ({ actionType }: Props) => {
       dispatch(addFriend({ ...values, id: generateUniqueId() }));
 
       resetForm();
+
+      navigate("/")
     }
 
     if (actionType === "edit") {
       dispatch(editFriend({ ...values, id: friendId }));
+
+      navigate("/")
     }
   };
 

@@ -9,7 +9,6 @@ export interface Friend {
 
 export interface FriendsState {
   friendList: Friend[];
-  selectedFriend: undefined | Friend;
 }
 
 export type RootState = {

@@ -1,10 +1,10 @@
 import { Col, Container } from "react-bootstrap";
 
 interface Props {
-  name: string;
-  email: string;
-  phone: string;
-  twitter: string;
+  name?: string;
+  email?: string;
+  phone?: string;
+  twitter?: string;
   actions?: React.ReactElement;
 }
 
@@ -12,7 +12,7 @@ export const FriendDetailsCard = ({name, email, phone, twitter, actions}: Props)
   return (
     <Container className="container">
       <Col>
-        <h2>{name}</h2>
+        <h2>{name || 'User not found'}</h2>
       </Col>
 
       <Col className="d-flex">
